@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.ToggleGroup?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<TabPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="631.0" prefWidth="839.0" tabClosingPolicy="UNAVAILABLE" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.Projv3.GymManagerController">
+    <tabs>
+        <Tab text="Add Membership">
+            <content>
+                <AnchorPane fx:id="printByName" minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                    <children>
+                        <Label layoutX="24.0" layoutY="35.0" text="First Name" />
+                        <Label layoutX="398.0" layoutY="35.0" text="Last Name" />
+                        <Label layoutX="24.0" layoutY="82.0" prefHeight="18.0" prefWidth="93.0" text="Date Of Birth" />
+                        <Label layoutX="398.0" layoutY="82.0" text="Location" />
+                        <Label layoutX="23.0" layoutY="127.0" text="Membership Type" />
+                        <RadioButton fx:id="standard" layoutX="141.0" layoutY="127.0" mnemonicParsing="false" text="Standard">
+                            <toggleGroup>
+                                <ToggleGroup fx:id="food" />
+                            </toggleGroup></RadioButton>
+                        <RadioButton fx:id="family" layoutX="245.0" layoutY="127.0" mnemonicParsing="false" text="Family" toggleGroup="$food" />
+                        <RadioButton fx:id="premium" layoutX="351.0" layoutY="127.0" mnemonicParsing="false" text="Premium" toggleGroup="$food" />
+                        <Button fx:id="addButton" layoutX="455.0" layoutY="127.0" mnemonicParsing="false" onAction="#clickAdd" prefHeight="26.0" prefWidth="90.0" text="add" />
+                        <Button layoutX="606.0" layoutY="127.0" mnemonicParsing="false" onAction="#remove" prefHeight="26.0" prefWidth="97.0" text="remove" />
+                        <TextField fx:id="fnameTextField" layoutX="128.0" layoutY="31.0" prefHeight="26.0" prefWidth="169.0" />
+                        <TextField fx:id="lnameTextField" layoutX="501.0" layoutY="31.0" prefHeight="26.0" prefWidth="170.0" />
+                        <TextField fx:id="dobTextField" layoutX="129.0" layoutY="78.0" prefHeight="26.0" prefWidth="171.0" />
+                        <TextField fx:id="locationTextField" layoutX="503.0" layoutY="78.0" prefHeight="26.0" prefWidth="173.0" />
+                        <TextArea fx:id="outputText" layoutX="-3.0" layoutY="221.0" onMousePressed="#printByName" prefHeight="382.0" prefWidth="839.0" />
+                  <Button fx:id="addButton1" layoutX="33.0" layoutY="182.0" mnemonicParsing="false" onAction="#loadMember" prefHeight="26.0" prefWidth="97.0" text="Load Member" />
+                  <Button fx:id="addButton2" layoutX="32.0" layoutY="153.0" mnemonicParsing="false" onAction="#LS" prefHeight="26.0" prefWidth="98.0" text="Load Schedule" />
+                  <Button fx:id="NamePrint" layoutX="274.0" layoutY="181.0" mnemonicParsing="false" onAction="#printByName" prefHeight="27.0" prefWidth="96.0" text="Print By Name" />
+                  <Button fx:id="printByDOB" layoutX="374.0" layoutY="181.0" mnemonicParsing="false" onAction="#printByDate" text="Print By Expire" />
+                  <Button fx:id="printByCounty" layoutX="468.0" layoutY="181.0" mnemonicParsing="false" onAction="#printByCounty" prefHeight="26.0" prefWidth="105.0" text="Print By County" />
+                  <Button fx:id="PrintMembers" layoutX="176.0" layoutY="182.0" mnemonicParsing="false" onAction="#printMembers" text="Print Members" />
+                  <Button fx:id="PrintByFee" layoutX="580.0" layoutY="181.0" mnemonicParsing="false" onAction="#printByFee" text="Print By Fee" />
+                    </children></AnchorPane>
+            </content>
+        </Tab>
+      <Tab text="Class Check in">
+         <content>
+            <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+               <children>
+                  <Label layoutX="24.0" layoutY="35.0" text="First Name" />
+                  <Label layoutX="398.0" layoutY="35.0" text="Last Name" />
+                  <Label layoutX="24.0" layoutY="82.0" prefHeight="18.0" prefWidth="93.0" text="Date Of Birth" />
+                  <Label layoutX="398.0" layoutY="82.0" text="Location" />
+                  <TextField fx:id="fnameTextField1" layoutX="128.0" layoutY="31.0" prefHeight="26.0" prefWidth="169.0" />
+                  <TextField fx:id="lnameTextField1" layoutX="501.0" layoutY="31.0" prefHeight="26.0" prefWidth="170.0" />
+                  <TextField fx:id="dobTextField1" layoutX="129.0" layoutY="78.0" prefHeight="26.0" prefWidth="171.0" />
+                  <TextField fx:id="locationTextField1" layoutX="503.0" layoutY="78.0" prefHeight="26.0" prefWidth="173.0" />
+                  <TextArea fx:id="outputText1" layoutX="-3.0" layoutY="221.0" prefHeight="382.0" prefWidth="839.0" />
+                  <Label layoutX="398.0" layoutY="130.0" prefHeight="18.0" prefWidth="93.0" text="Class name" />
+                  <Label layoutX="14.0" layoutY="130.0" prefHeight="18.0" prefWidth="93.0" text="Instructor name" />
+                  <TextField fx:id="iName" layoutX="130.0" layoutY="126.0" prefHeight="26.0" prefWidth="169.0" />
+                  <TextField fx:id="CName" layoutX="503.0" layoutY="126.0" prefHeight="26.0" prefWidth="173.0" />
+                  <Button fx:id="addButton3" layoutX="465.0" layoutY="174.0" mnemonicParsing="false" onAction="#Checkin2" prefHeight="26.0" prefWidth="90.0" text="Checkin" />
+                  <Button fx:id="addButton31" layoutX="590.0" layoutY="174.0" mnemonicParsing="false" onAction="#Checkout" prefHeight="26.0" prefWidth="90.0" text="Checkout" />
+                  <Button fx:id="addButton32" layoutX="26.0" layoutY="174.0" mnemonicParsing="false" onAction="#guestCheckIn" prefHeight="26.0" prefWidth="90.0" text="GuestCheckin" />
+                  <Button fx:id="addButton321" layoutX="148.0" layoutY="174.0" mnemonicParsing="false" onAction="#guestCheckout" prefHeight="26.0" prefWidth="119.0" text="GuestCheckout" />
+                  <Button fx:id="addButton3211" layoutX="297.0" layoutY="174.0" mnemonicParsing="false" onAction="#printv2" prefHeight="26.0" prefWidth="90.0" text="print" />
+               </children>
+            </AnchorPane>
+         </content>
+      </Tab>
+    </tabs>
+</TabPane>
